@@ -13,9 +13,9 @@ import "./App.css";
 import { Toaster } from "./components/refine-ui/notification/toaster";
 import { useNotificationProvider } from "./components/refine-ui/notification/use-notification-provider";
 import { ThemeProvider } from "./components/refine-ui/theme/theme-provider";
-import { dataProvider } from "./providers/data";
 import {Home,BookOpenIcon} from "lucide-react";
 import {Layout} from "@/components/refine-ui/layout/layout.tsx"
+import {dataProvider} from "@/providers/data.ts";
 
 function App() {
   return (
