@@ -18,7 +18,8 @@ import {Layout} from "@/components/refine-ui/layout/layout.tsx"
 import {dataProvider} from "@/providers/data.ts";
 
 function App() {
-  return (
+
+    return (
     <BrowserRouter>
       <GitHubBanner />
       <RefineKbarProvider>
