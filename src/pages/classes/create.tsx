@@ -92,7 +92,7 @@ const Create = () => {
 
         } else {
             field.onChange('')
-            form.setValue('bannerCldPubId', file.publicId, {
+            form.setValue('bannerCldPubId', '', {
                 shouldValidate: true,
                 shouldDirty: true
             })
