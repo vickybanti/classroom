@@ -4,6 +4,9 @@ import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 import Dashboard from "@/pages/Dashboard.tsx";
 import Subjectslists from "@/pages/subjects/Lists.tsx";
 import SubjectsCreate from "@/pages/subjects/create.tsx";
+import Classeslists from "@/pages/classes/list.tsx";
+import ClassesCreate from "@/pages/classes/create.tsx";
+
 import routerProvider, {
   DocumentTitleHandler,
   UnsavedChangesNotifier,
@@ -13,7 +16,7 @@ import "./App.css";
 import { Toaster } from "./components/refine-ui/notification/toaster";
 import { useNotificationProvider } from "./components/refine-ui/notification/use-notification-provider";
 import { ThemeProvider } from "./components/refine-ui/theme/theme-provider";
-import {Home,BookOpenIcon} from "lucide-react";
+import {Home, BookOpenIcon, GraduationCap} from "lucide-react";
 import {Layout} from "@/components/refine-ui/layout/layout.tsx"
 import {dataProvider} from "@/providers/data.ts";
 
@@ -48,6 +51,14 @@ function App() {
                       create:'/subjects/create',
                       meta:{label:'Subjects',icon:<BookOpenIcon />}
                   },
+                  {
+                      name:'classes',
+                      list:'/classes',
+                      create:'/classes/create',
+                      meta:{
+                          label:'Classes',
+                          icon:<GraduationCap />}
+                  },
               ]}
             >
               <Routes>
@@ -61,6 +72,11 @@ function App() {
                         <Route index element={<Subjectslists />} />
                         <Route path="create" element={<SubjectsCreate/>} />
                     </Route>
+
+                      <Route path='classes' >
+                          <Route index element={<Classeslists />} />
+                          <Route path="create" element={<ClassesCreate/>} />
+                      </Route>
                   </Route>
               </Routes>
               <Toaster />
