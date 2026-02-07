@@ -19,6 +19,7 @@ import { ThemeProvider } from "./components/refine-ui/theme/theme-provider";
 import {Home, BookOpenIcon, GraduationCap} from "lucide-react";
 import {Layout} from "@/components/refine-ui/layout/layout.tsx"
 import {dataProvider} from "@/providers/data.ts";
+import ClassesShow from "@/pages/classes/show.tsx";
 
 function App() {
 
@@ -55,6 +56,7 @@ function App() {
                       name:'classes',
                       list:'/classes',
                       create:'/classes/create',
+                      show:'/classes/show/:id',
                       meta:{
                           label:'Classes',
                           icon:<GraduationCap />}
@@ -76,6 +78,7 @@ function App() {
                       <Route path='classes' >
                           <Route index element={<Classeslists />} />
                           <Route path="create" element={<ClassesCreate/>} />
+                          <Route path="show/:id" element={<ClassesShow />} />
                       </Route>
                   </Route>
               </Routes>
