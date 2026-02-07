@@ -20,11 +20,11 @@ import {
     Home,
     Users,
 } from "lucide-react";
-import SubjectsList from "./pages/subjects/list";
+import SubjectsList from './pages/subjects/Lists.tsx'
 import { Layout } from "./components/refine-ui/layout/layout";
 import SubjectsCreate from "./pages/subjects/create";
 import SubjectsShow from "./pages/subjects/show";
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./pages/Dashboard";
 
 import { dataProvider } from "./providers/data";
 import ClassesList from "./pages/classes/list";
@@ -36,8 +36,8 @@ import { Register } from "./pages/register";
 import DepartmentsList from "./pages/departments/list";
 import DepartmentsCreate from "./pages/departments/create";
 import DepartmentShow from "./pages/departments/show";
-import FacultyList from "./pages/faculty/list";
-import FacultyShow from "./pages/faculty/show";
+import FacultyList from "./pages/facaulty/list";
+import FacultyShow from "./pages/facaulty/show";
 import EnrollmentsCreate from "./pages/enrollments/create";
 import EnrollmentsJoin from "./pages/enrollments/join";
 import EnrollmentConfirm from "./pages/enrollments/confirm";
